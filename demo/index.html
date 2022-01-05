@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        background: #fafafa;
+      }
+      .animation-handclock2 {
+        --animation-handclock-background-color: rgb(16, 77, 21);
+        --animation-handclock-hour-marker-color: #ff0;
+        --animation-handclock-minute-marker-color: #f00;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo"></div>
+
+    <script type="module">
+      import { html, render } from 'lit';
+      import '../animation-handclock.js';
+
+      const size = 500;
+      render(
+        html`
+          <animation-handclock
+            class="animation-handclock1"
+            size="${size}"
+          ></animation-handclock>
+        `,
+        document.querySelector('#demo')
+      );
+    </script>
+  </body>
+</html>
