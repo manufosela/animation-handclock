@@ -19,7 +19,9 @@ describe('AnimationHandclock', () => {
   });
 
   it('can override the title via attribute', async () => {
-    const el = await fixture(html`<animation-handclock title="attribute title"></animation-handclock>`);
+    const el = await fixture(
+      html`<animation-handclock title="attribute title"></animation-handclock>`,
+    );
 
     expect(el.title).to.equal('attribute title');
   });
