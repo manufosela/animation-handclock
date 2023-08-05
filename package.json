@@ -3,7 +3,7 @@
   "description": "Webcomponent animation-handclock following open-wc recommendations",
   "license": "MIT",
   "author": "manufosela",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "animation-handclock.js",
   "type": "module",
   "module": "animation-handclock.js",
@@ -18,20 +18,20 @@
     "storybook:build": "npm run analyze -- --exclude dist && build-storybook"
   },
   "dependencies": {
-    "lit": "^2.0.2"
+    "lit": "^2.8.0"
   },
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.4.17",
-    "@open-wc/eslint-config": "^4.3.0",
+    "@custom-elements-manifest/analyzer": "^0.8.4",
+    "@open-wc/eslint-config": "^12.0.0",
     "@open-wc/testing": "next",
-    "@web/dev-server": "^0.1.28",
-    "@web/dev-server-storybook": "next",
-    "@web/test-runner": "^0.13.22",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.4.1"
+    "@web/dev-server": "^0.3.0",
+    "@web/dev-server-storybook": "^0.0.2",
+    "@web/test-runner": "^0.17.0",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.10.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.1"
   },
   "customElements": "custom-elements.json",
   "eslintConfig": {
@@ -48,6 +48,9 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "engines": {
+    "node": "18.12.0"
   },
   "lint-staged": {
     "*.js": [

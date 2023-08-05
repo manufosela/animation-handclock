@@ -6,7 +6,7 @@ import { css } from 'lit';
 export const animationHandclockStyles = css`
   :host {
     display: inline-block;
-    margin:0;
+    margin: 0;
     padding: 0;
     color: var(--animation-handclock-text-color, #000);
     background-color: var(--animation-handclock-background-color, #fff);
@@ -14,7 +14,7 @@ export const animationHandclockStyles = css`
 
   .hour_marker {
     fill: transparent;
-    stroke: var(--animation-handclock-hour-marker-color,#f0f0c9);
+    stroke: var(--animation-handclock-hour-marker-color, #f0f0c9);
     stroke-width: 7;
     stroke-dasharray: 0.2, 4.8;
     stroke-dashoffset: 0.1;
@@ -42,4 +42,14 @@ export const animationHandclockStyles = css`
     stroke: yellow;
   }
 
+  h4.title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  h3.ampm {
+    position: absolute;
+    color: var(--animation-handclock-text-color, #000);
+  }
 `;

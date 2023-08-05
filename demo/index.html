@@ -6,30 +6,50 @@
       body {
         background: #fafafa;
       }
+      animation-handclock {
+        margin: 2rem;
+      }
+
+      .animation-handclock1 {
+        --animation-handclock-background-color: rgb(16, 17, 21);
+        --animation-handclock-hour-marker-color: #ff0;
+        --animation-handclock-minute-marker-color: #f00;
+      }
+
       .animation-handclock2 {
         --animation-handclock-background-color: rgb(16, 77, 21);
         --animation-handclock-hour-marker-color: #ff0;
         --animation-handclock-minute-marker-color: #f00;
       }
+
+      .animation-handclock3 {
+        --animation-handclock-background-color: rgb(76, 17, 21);
+        --animation-handclock-hour-marker-color: #0ff;
+        --animation-handclock-minute-marker-color: #00f;
+      }
     </style>
   </head>
   <body>
-    <div id="demo"></div>
-
-    <script type="module">
-      import { html, render } from 'lit';
-      import '../animation-handclock.js';
-
-      const size = 500;
-      render(
-        html`
-          <animation-handclock
-            class="animation-handclock1"
-            size="${size}"
+    <div id="demo">
+      <animation-handclock
+          class="animation-handclock1"
+          size="400"
+        ></animation-handclock>
+      <animation-handclock
+            class="animation-handclock2"
+            size="300"
+            utc="-5"
+            text="New York"
           ></animation-handclock>
-        `,
-        document.querySelector('#demo')
-      );
-    </script>
+      <animation-handclock
+          class="animation-handclock3"
+          size="300"
+          utc="+7"
+          text="Tokyo"
+        ></animation-handclock>
+    </div>
+
+    <script type="module" src="../animation-handclock.js"></script>
+
   </body>
 </html>
